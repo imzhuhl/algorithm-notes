@@ -27,17 +27,17 @@
 ```python
 # father 数组 fa 初始化
 for i in range(n):
-	fa[i] = i
+    fa[i] = i
 ```
 
 定义操作 find：
 
 ```python
 def find(x):
-	if fa[x] != x:
-		return find(fa[x])
-	else:
-		return x
+    if fa[x] != x:
+        return find(fa[x])
+    else:
+        return x
 ```
 
 find 操作的逻辑是查找元素 x 所属的集合，然后返回这个集合中的一个代表元素，如果 `fa[x]==x` 表示 x 就是这个集合的代表元素，就立即返回，如果不是，则通过 father 数组网上寻找，找到代表元素。
@@ -46,11 +46,11 @@ find 操作的逻辑是查找元素 x 所属的集合，然后返回这个集合
 
 ```python
 def union(x, y):
-	x = find(x)
-	y = find(y)
-	if x == y:  # 本身就属于一个集合
-		return
-	fa[x] = y	# 合并集合，x 的上级元素是 y
+    x = find(x)
+    y = find(y)
+    if x == y:  # 本身就属于一个集合
+        return
+    fa[x] = y	# 合并集合，x 的上级元素是 y
 ```
 
 合并操作会将 x 所属的集合和 y 所属的集合合并在一起。
