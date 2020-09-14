@@ -34,7 +34,7 @@ def canPartition(self, nums: List[int]) -> bool:
     return self.dfs(0, target, nums)
 
 def dfs(self, cur: int, rest: int, nums: List[int]):
-	if rest == 0:
+    if rest == 0:
         return True
     if rest < 0:
         return False
@@ -42,7 +42,7 @@ def dfs(self, cur: int, rest: int, nums: List[int]):
         ret = self.dfs(i+1, rest-nums[i], nums)
         if ret:
             return True
-	return False    
+    return False    
 ```
 
 测试样例会可能出现极端情况，例如 `[1, 1, 1, ..., 1000]` ，这种情况下回溯法很容易超时，因此我们需要及时剪枝，例如当前这一步和上一步是相同的值时，就可以直接剪枝，因为相同的输入，会导致相同的输出：
@@ -72,7 +72,7 @@ for i in range(cur, len(nums)):
 def dfs(self, cur: int, rest: int, nums: List[int]):
     for i in range(cur, len(nums)):
         if i > cur and nums[i] == nums[i-1]:
-        	continue
+            continue
         if nums[i] > rest:  # 当前元素大于 rest, 就不用考虑之后的元素了, 直接结束循环
             break
         if nums[i] == rest:
@@ -80,7 +80,7 @@ def dfs(self, cur: int, rest: int, nums: List[int]):
         ret = self.dfs(i+1, rest-nums[i], nums)
         if ret:
             return True
-	return False 
+    return False 
 ```
 
 **代码**：[416](./backtracking/0416.py)
