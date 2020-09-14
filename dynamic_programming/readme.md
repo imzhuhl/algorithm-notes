@@ -62,11 +62,11 @@ $$
 
 ```python
 for i in range(1, n+1):
-	for j in range(1, W+1):
+    for j in range(1, W+1):
         if j < w[i]:
             dp[i][j] = dp[i-1][j]
         else:
-        	dp[i][j] = max(dp[i-1, j], dp[i-1, j-w[i]] + v[i])
+            dp[i][j] = max(dp[i-1, j], dp[i-1, j-w[i]] + v[i])
 ```
 
 观察上述的转移方程，可以发现当前 dp 的状态只和前 i-1 件物品有关，即影响 $dp(i,.)$ 的只有 $dp(i-1, .)$ 。因此没有必要使用二维数组记录前面所有的状态，只需要一维数组即可。
