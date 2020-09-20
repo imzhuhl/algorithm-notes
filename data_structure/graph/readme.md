@@ -1,6 +1,10 @@
 # 例题
 
-
+| 题目                                                         | 题解                      | 思路                 |
+| ------------------------------------------------------------ | ------------------------- | -------------------- |
+| [leetcode 207 课程表](https://leetcode-cn.com/problems/course-schedule/) | [py3](./exercise/0207.py) | 判断是否为有向无环图 |
+|                                                              |                           |                      |
+|                                                              |                           |                      |
 
 
 
@@ -14,6 +18,8 @@ Directed Acyclic Graph，缩写 DAG，边有向，无环
 * 能否进行拓扑排序
 
 有向无环图和树的区别：[链接](https://blog.csdn.net/XXJ19950917/article/details/78046550)
+
+关于有向无环图的判断见例题 [leetcode 207 课程表](https://leetcode-cn.com/problems/course-schedule/)。
 
 # 拓扑排序
 
@@ -45,6 +51,10 @@ if 图还存在其他边 {
     return L; 
 }
 ```
+
+## DFS 算法
+
+参考 [leetcode 207 课程表](https://leetcode-cn.com/problems/course-schedule/)，只需要加入栈，将已经 check 的点依次放入栈中，最后依次出栈，出栈顺序就是拓扑排序的顺序。
 
 
 
