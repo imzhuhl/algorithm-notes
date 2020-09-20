@@ -21,6 +21,8 @@ Directed Acyclic Graph，缩写 DAG，边有向，无环
 
 关于有向无环图的判断见例题 [leetcode 207 课程表](https://leetcode-cn.com/problems/course-schedule/)。
 
+
+
 # 拓扑排序
 
 拓扑排序针对有向无环图。我们将图中的顶点以线性方式进行排序，使得排在前面的节点不能依赖于排在后面的节点。
