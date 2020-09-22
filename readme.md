@@ -7,8 +7,9 @@ Algorighm notes
   * 栈
   * 树
   * [堆](./data_structure/heap/readme.md)
-  * 图
+  * [图](./data_structure/graph/readme.md)
   * [并查集](./data_structure/disjoint/readme.md)
+  * [树状数组](./data_structure/binary_index_tree/readme.md)
 * 基础算法
   * [回溯](./basic_algorithm/backtracking/readme.md)
   * [BFS](./basic_algorithm/BFS/readme.md)
