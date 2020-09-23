@@ -11,10 +11,14 @@ Algorighm notes
   * [并查集](./data_structure/disjoint/readme.md)
   * [树状数组](./data_structure/binary_index_tree/readme.md)
 * 基础算法
-  * [回溯](./basic_algorithm/backtracking/readme.md)
-  * [BFS](./basic_algorithm/BFS/readme.md)
+  * 排序
+  * BFS
   * DFS
 * 动态规划
   * [基础](./dynamic_programming/readme.md)
   * [背包问题](./dynamic_programming/readme.md#背包)
 
+
+题集
+
+[exercise](./exercise/readme.md)
