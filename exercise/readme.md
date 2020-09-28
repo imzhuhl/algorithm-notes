@@ -7,6 +7,7 @@ leetcode 题解
 | [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | 利用散列表降低时间复杂度 | [题解](./leetcode/0106/readme.md) |
 | [107. 二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/) | BFS                      | [题解](./leetcode/0107/readme.md) |
 | [113. 路径总和 II](https://leetcode-cn.com/problems/path-sum-ii/) | DFS                      | [python](./leetcode/0113/0113.py) |
+| [*135. 分发糖果](https://leetcode-cn.com/problems/candy/)    | 贪心                     | [题解](./leetcode/0135/readme.md) |
 | [207. 课程表](https://leetcode-cn.com/problems/course-schedule/) | 判断有向无环图           | [python](./leetcode/0207/0207.py) |
 | [215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | 堆                       | [python](./leetcode/0215/0215.py) |
 | [*239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | 单调队列                 | [题解](./leetcode/0239/readme.md) |
