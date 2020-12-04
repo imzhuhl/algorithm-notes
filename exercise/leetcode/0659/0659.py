@@ -1,40 +1,31 @@
 from typing import List
+import collections
+
 
 class Solution:
     def isPossible(self, nums: List[int]) -> bool:
-        first_list = []
-        second_list = []  # item number >= 3
+        count_map = collections.Counter(nums)
+        end_map = collections.Counter()
 
-        for item in nums:
-            flag = False
-            for i in range(len(first_list)):
-                fl = first_list[i]
-                if fl[0] + 1 == item:
-                    flag = True
-                    fl[0] = item
-                    fl[1] += 1
-                    if fl[1] == 3:
-                        second_list.append(fl)
-                        del first_list[i]
-                    break
-            if flag: continue
-            for i in range(len(second_list)):
-                sl = second_list[i]
-                if sl[0] + 1 == item:
-                    flag = True
-                    sl[0] = item
-                    sl[1] += 1
-                    break
-            if flag: continue
-            n_lst = [item, 1]
-            first_list.append(n_lst)
-        
-        if len(first_list) == 0:
-            return True
-
-        return False
+        for x in nums:
+            if count_map[x] == 0:
+                continue
+            if end_map[x-1] > 0:
+                count_map[x] -= 1
+                end_map[x-1] -= 1
+                end_map[x] += 1
+            else:
+                # 新开一个
+                if count_map[x] > 0 and count_map[x+1] > 0 and count_map[x+2] > 0:
+                    count_map[x] -= 1
+                    count_map[x+1] -= 1
+                    count_map[x+2] -= 1
+                    end_map[x+2] += 1
+                else:
+                    return False
+        return True
                 
 
 if __name__ == '__main__':
-    print(Solution().isPossible([1,2,3,4,4,5]))
+    print(Solution().isPossible([1,2,3,3,4,5]))
             
