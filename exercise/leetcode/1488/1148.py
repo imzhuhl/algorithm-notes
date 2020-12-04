@@ -24,7 +24,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    rains = [1,2,0,0,2,1]
+    rains = [1, 2, 0, 0, 2, 1]
     sl = Solution()
     print(sl.avoidFlood(rains))
 
