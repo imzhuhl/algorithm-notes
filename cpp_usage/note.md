@@ -54,6 +54,20 @@ for (auto it = v.begin(); it != v.end(); ++it) {
 }
 ```
 
+### set
+
+```c++
+/// 初始化
+unordered_set<int> s;
+unordered_set<int> s(v.begin(), v.end());  // 迭代器初始化
+
+/// 基本操作
+int a = 1;
+s.insert(a);  // 插入元素
+s.count(a);  // 返回元素的数量，只会是 0 或 1
+s.erase(a);  // 删除元素
+```
+
 其他线性容器：
 
 * deque：双端队列
